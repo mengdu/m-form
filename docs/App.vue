@@ -3,11 +3,9 @@
     <fork-link :repo="repo" />
     <header>
       <img src="./assets/logo.png">
-      <!-- <HelloWorld /> -->
+      <h1>m-from 组件</h1>
     </header>
-    <main>
-      <!-- <readme></readme> -->
-      <!-- <Doc/> -->
+    <main class="doc-block">
       <m-form @submit.native.prevent="" :label-width="labelWidth" :inline="inline" :label-position="labelPosition">
         <m-form-item label="Username" required>
           <input type="text" class="form-control" placeholder="Username">
@@ -30,6 +28,9 @@
           <option value="">空</option>
         </select>
       </div>
+
+      <readme></readme>
+      <!-- <Doc/> -->
     </main>
     <layout-footer></layout-footer>
   </div>
@@ -50,7 +51,7 @@ export default {
     LayoutFooter,
     ForkLink,
     // Doc,
-    // Readme
+    Readme
   },
   data () {
     return {
@@ -117,6 +118,23 @@ export default {
     border-radius: 3px;
     line-height: 18px;
     font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+  }
+
+  .doc-block table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #fff;
+    font-size: 14px;
+    margin-bottom: 45px;
+    line-height: 1.5em;
+    text-align: left;
+  }
+  .doc-block table td,
+  .doc-block table th
+  {
+    border-bottom: 1px solid #d8d8d8;
+    padding: 15px;
+    max-width: 250px;
   }
 
   .form-control{

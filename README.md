@@ -1,16 +1,16 @@
-# m-from
+# m-form
 
 表单组件
 
 
-[Example](https://mengdu.github.io/m-from/example/)
+[Example](https://mengdu.github.io/m-form/example/)
 
 ```ls
 npm install -S vue-m-form
 ```
 
 ```js
-import MForm from
+import MForm from 'vue-m-form'
 
 Vue.use(MForm)
 ```
