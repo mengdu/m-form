@@ -1,69 +1,53 @@
-# vue-component-devtool
+# m-from
 
-> 基于 webpack 打造的 Vue 组件开发工具。可以编写例子，文档。
-> 基于vue init webpack 模板修改，参照了 [element-ui](https://github.com/ElemeFE/element) 的实现。
-
-
-[Example](https://mengdu.github.io/m-button/example/)
+表单组件
 
 
-**功能**
+[Example](https://mengdu.github.io/m-from/example/)
 
-+ 打包vue组件，导出 `umd` 模式
-+ 支持 `markdown` 解析
-+ `markdwon` 可以编写编写vue例子
+```ls
+npm install -S vue-m-form
+```
 
-> 目前仅支持单组件打包导出
+```js
+import MForm from
 
+Vue.use(MForm)
+```
 
-**目录**：
+**例子**
 
 ```html
-├─build
-├─config
-├─dist
-│  ├─index.js
-│  └─css
-├─src 组件源码，以 `index.js` 导出组件
-├─docs 文档及在线列子源码
-├─example 生成的文档及在线例子
-
+<m-form @submit.native.prevent="">
+  <m-form-item label="Username" required>
+    <input type="text" class="form-control" placeholder="Username">
+  </m-form-item>
+  <m-form-item label="Password" required>
+    <input type="text" class="form-control" placeholder="Password">
+  </m-form-item>
+  <m-form-item label="NickName">
+    <input type="text" class="form-control" placeholder="NickName">
+  </m-form-item>
+  <m-form-item>
+    <m-button>提交</m-button>
+  </m-form-item>
+</m-form>
 ```
 
 
-可以在 `docs` 的文件里 `import MyComponent from '@/index'` 载入你的组件。
+## MForm Attributes
+
+| 参数      | 说明          | 类型      | 可选值                           | 默认值  |
+|---------- |-------------- |---------- |--------------------------------  |-------- |
+| inline    | 显示行模式 | Boolean | — | false |
+| label-width| 标签长度 | String/Number | — | — |
+| label-position | 标签位置 | String | — | — |
 
 
+## MFormItem Attributes
 
-**开发模式**（支持热更新）
-
-```ls
-npm run dev
-```
-
-打开 `http://localhost:8080` 查看效果。
-
-
-
-**打包组件**
-
-```ls
-npm run build
-```
-
-打包后组件被打包成js和css在 `dist` 文件夹中。
-
-**生成文档**
-
-```ls
-npm run docs
-```
-
-生成文档在 `example` 文件夹，打开 `index.html` 可可以浏览。上传Github后可以在Github 开启项目Page访问。
-
-
-## Other
-
-[element-ui](https://github.com/ElemeFE/element)
-
-[vue-markdown-loader](https://github.com/QingWei-Li/vue-markdown-loader)
+| 参数      | 说明          | 类型      | 可选值                           | 默认值  |
+|---------- |-------------- |---------- |--------------------------------  |-------- |
+| label    | 标签名 | String | — | — |
+| label-width| 标签长度 | String/Number | — | — |
+| required | 必须 | Boolean | — | false |
