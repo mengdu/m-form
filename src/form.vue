@@ -11,7 +11,7 @@
   </form>
 </template>
 <script>
-import './form.less'
+
 export default {
   name: 'MForm',
   props: {
@@ -20,11 +20,6 @@ export default {
     inline: Boolean,
     labelWidth: [String, Number],
     labelPosition: [String, Number]
-  },
-  data () {
-    return {
-      msg: 'Vue component devtool'
-    }
   },
   methods: {
     submit () {

@@ -3,7 +3,7 @@
     <fork-link :repo="repo" />
     <header>
       <img src="./assets/logo.png">
-      <h1>m-from 组件</h1>
+      <h1>m-form 组件</h1>
     </header>
     <main class="doc-block">
       <m-form @submit.native.prevent="" :label-width="labelWidth" :inline="inline" :label-position="labelPosition">
