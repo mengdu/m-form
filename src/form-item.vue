@@ -41,9 +41,6 @@ export default {
     return {
       errorMsg: ''
     }
-  },
-  mounted () {
-    console.log(this.$options.componentName)
   }
 }
 </script>

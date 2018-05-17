@@ -6,7 +6,7 @@ import DemoBlock from './components/demo-block'
 import MButton from 'vue-m-button'
 import 'vue-m-button/dist/css/default.css'
 import MForm from '@/index'
-
+// import MForm from '@/../index'
 Vue.use(MButton)
 Vue.component('DemoBlock', DemoBlock)
 Vue.use(MForm)
